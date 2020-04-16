@@ -1,7 +1,5 @@
-
 {
-  "values":[
-  "oregen:load"
-  ]
+    "values": [
+        "#load:__init"
+    ]
 }
-  

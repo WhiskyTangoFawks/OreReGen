@@ -71,6 +71,15 @@ scoreboard players set $oregen oreTypeLapis 6
 scoreboard objectives add oreTypeEmerald dummy
 scoreboard players set $oregen oreTypeEmerald 7
 
+scoreboard objectives add oreTypeObsidian dummy
+scoreboard players set $oregen oreTypeObsidian 8
+
+scoreboard objectives add oreTypeClay dummy
+scoreboard players set $oregen oreTypeClay 9
+
+scoreboard objectives add oreTypeCobble dummy
+scoreboard players set $oregen oreTypeCobble 9
+
 scoreboard objectives add const3 dummy
 scoreboard players set $oregen const3 3
 
@@ -80,11 +89,25 @@ scoreboard players set $oregen const2 2
 scoreboard objectives add const4 dummy
 scoreboard players set $oregen const4 4
 
+scoreboard objectives add const26 dummy
+scoreboard players set $oregen const26 26
+
+scoreboard objectives add const243 dummy
+scoreboard players set $oregen const243 243
+
+scoreboard objectives add const192 dummy
+scoreboard players set $oregen const192 192
+
 scoreboard objectives add gencount dummy
-scoreboard players set $oregen gencount 0
+execute unless score $oregen gencount > $oregen const2 run scoreboard players set $oregen gencount 0
 
 scoreboard objectives add temp dummy
 scoreboard players set $oregen temp 0
+scoreboard objectives add temp2 dummy
+scoreboard players set $oregen temp2 0
 
 scoreboard objectives add genX dummy
 scoreboard objectives add genZ dummy
+
+scoreboard objectives add testMode dummy
+scoreboard players set $oregen testMode 0

@@ -8,3 +8,5 @@ function oregen:generators/start_gold_generate
 function oregen:generators/start_redstone_generate
 function oregen:generators/start_iron_generate
 function oregen:generators/start_coal_generate
+function oregen:generators/start_cobble_generate
+function oregen:generators/start_obsidian_generate

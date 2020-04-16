@@ -1,4 +1,4 @@
-#fill ~ ~ ~ ~ ~ ~ minecraft:lapis_ore replace minecraft:air
+execute if score $oregen testMode matches 1 run fill ~ ~ ~ ~ ~ ~ minecraft:lapis_ore replace minecraft:air
 
 fill ~ ~ ~ ~ ~ ~ minecraft:lapis_ore replace minecraft:stone
 fill ~ ~ ~ ~ ~ ~ minecraft:lapis_ore replace minecraft:andesite
