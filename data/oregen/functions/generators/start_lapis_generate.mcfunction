@@ -5,7 +5,7 @@ scoreboard players set $oregen oreGenMaxRY 45
 scoreboard players set $oregen oreVeinLenMax 12
 scoreboard players set $oregen oreGenSpawnMax 8
 scoreboard players set $oregen oreGenSpawnSum 0
-scoreboard players set $oregen oreGenTargetDens 158
+scoreboard players set $oregen oreGenTargetDens 64
 
 execute if predicate du:location/biome_types/jungle run scoreboard players operation $oregen oreGenSpawnMax *= $oregen const3
 execute if predicate du:location/biome_types/jungle run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const2

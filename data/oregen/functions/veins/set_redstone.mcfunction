@@ -1,4 +1,4 @@
-#fill ~ ~ ~ ~ ~ ~ minecraft:redstone_ore replace minecraft:air
+fill ~ ~ ~ ~ ~ ~ minecraft:redstone_ore replace minecraft:air
 
 fill ~ ~ ~ ~ ~ ~ minecraft:redstone_ore replace minecraft:stone
 fill ~ ~ ~ ~ ~ ~ minecraft:redstone_ore replace minecraft:andesite

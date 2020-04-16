@@ -7,3 +7,6 @@ execute if score $oregen oreGenType = $oregen oreTypeRedstone run function orege
 execute if score $oregen oreGenType = $oregen oreTypeDiamond run function oregen:veins/diamond
 execute if score $oregen oreGenType = $oregen oreTypeEmerald run function oregen:veins/emerald
 execute if score $oregen oreGenType = $oregen oreTypeLapis run function oregen:veins/lapis
+execute if score $oregen oreGenType = $oregen oreTypeObsidian run function oregen:veins/obsidian
+execute if score $oregen oreGenType = $oregen oreTypeClay run function oregen:veins/clay
+execute if score $oregen oreGenType = $oregen oreTypeCobble run function oregen:veins/cobble

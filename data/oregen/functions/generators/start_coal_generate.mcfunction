@@ -5,7 +5,7 @@ scoreboard players set $oregen oreGenMaxRY 30
 
 scoreboard players set $oregen oreVeinLenMax 12
 #oregenSpawnMax is artificially high, because maxY is at 96, almost half the ore in a normal biome will (not) generate in air
-scoreboard players set $oregen oreGenSpawnMax 210
+scoreboard players set $oregen oreGenSpawnMax 160
 scoreboard players set $oregen oreGenSpawnSum 0
 scoreboard players set $oregen oreGenTargetDens 98
 

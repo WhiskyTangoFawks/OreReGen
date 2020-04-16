@@ -5,7 +5,7 @@ scoreboard players set $oregen oreGenMaxRY 20
 scoreboard players set $oregen oreVeinLenMax 32
 scoreboard players set $oregen oreGenSpawnMax 25
 scoreboard players set $oregen oreGenSpawnSum 0
-scoreboard players set $oregen oreGenTargetDens 98
+scoreboard players set $oregen oreGenTargetDens 64
 
 #Desert, generates 1.5x more, veins start lower but are 2x as long and denser
 execute if predicate du:location/biome_types/desert run scoreboard players operation $oregen oreVeinLenMax *= $oregen const2

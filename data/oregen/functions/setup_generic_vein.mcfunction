@@ -9,7 +9,7 @@ scoreboard players set $oregen oreGenStartRY -15
 
 scoreboard players set $oregen oreGenMaxX 15
 scoreboard players set $oregen oreGenMaxZ 15
-scoreboard players set $oregen oreGenMaxRX 345
+scoreboard players set $oregen oreGenMaxRX 180
 scoreboard players set $oregen oreVeinLenSum 0
 
 #Set startX 0 to 15
