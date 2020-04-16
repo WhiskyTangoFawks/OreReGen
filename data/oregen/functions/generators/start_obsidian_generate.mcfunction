@@ -1,9 +1,9 @@
-scoreboard players set $oregen oreGenMaxY 10
+scoreboard players set $oregen oreGenMaxY 20
 scoreboard players set $oregen oreGenMinRY 0
 scoreboard players set $oregen oreGenMaxRY 90
 
 scoreboard players set $oregen oreVeinLenMax 12
-scoreboard players set $oregen oreGenSpawnMax 1000
+scoreboard players set $oregen oreGenSpawnMax 1200
 scoreboard players set $oregen oreGenSpawnSum 0
 scoreboard players set $oregen oreGenTargetDens 10
 

@@ -4,8 +4,8 @@ scoreboard players set $oregen oreGenMinRY -45
 scoreboard players set $oregen oreGenMaxRY 30 
 
 scoreboard players set $oregen oreVeinLenMax 12
-#oregenSpawnMax is artificially high, because maxY is at 96, almost half the ore in a normal biome will (not) generate in air
-scoreboard players set $oregen oreGenSpawnMax 160
+scoreboard players set $oregen oreGenSpawnMax 120
+
 scoreboard players set $oregen oreGenSpawnSum 0
 scoreboard players set $oregen oreGenTargetDens 98
 
@@ -14,10 +14,25 @@ execute if predicate du:location/biome_types/swamp run scoreboard players operat
 execute if predicate du:location/biome_types/swamp run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const2
 execute if predicate du:location/biome_types/swamp run scoreboard players set $oregen oreGenTargetDens 64
 
-#Mountains- *2 gen height, *1.5 ore generation
-execute if predicate du:location/biome_types/mountains run scoreboard players operation $oregen oreGenMaxY *= $oregen const2
-execute if predicate du:location/biome_types/mountains run scoreboard players operation $oregen oreGenSpawnMax *= $oregen const3
-execute if predicate du:location/biome_types/mountains run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const2
+#generate 1.5x in badlands
+execute if predicate du:location/biome_types/badlands run scoreboard players operation $oregen oreGenSpawnMax *= $oregen const3
+execute if predicate du:location/biome_types/badlands run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const2
+
+#generate 1.5x in jungle at a lower density
+execute if predicate du:location/biome_types/jungle run scoreboard players operation $oregen oreGenSpawnMax *= $oregen const3
+execute if predicate du:location/biome_types/jungle run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const2
+execute if predicate du:location/biome_types/jungle run scoreboard players set $oregen oreGenTargetDens 128
+
+#generate 0.66x in desert at a higher density
+execute if predicate du:location/biome_types/desert run scoreboard players operation $oregen oreGenSpawnMax *= $oregen const2
+execute if predicate du:location/biome_types/desert run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const3
+execute if predicate du:location/biome_types/desert run scoreboard players set $oregen oreGenTargetDens 48
+
+#generate 0.66x in plains at a lower density
+execute if predicate du:location/biome_types/plains run scoreboard players operation $oregen oreGenSpawnMax *= $oregen const2
+execute if predicate du:location/biome_types/plains run scoreboard players operation $oregen oreGenSpawnMax /= $oregen const3
+execute if predicate du:location/biome_types/plains run scoreboard players set $oregen oreGenTargetDens 128
 
 scoreboard players operation $oregen oreGenType = $oregen oreTypeCoal
+function oregen:generators/post_setup
 function oregen:setup_generic_vein

@@ -99,10 +99,15 @@ scoreboard objectives add const192 dummy
 scoreboard players set $oregen const192 192
 
 scoreboard objectives add gencount dummy
-scoreboard players set $oregen gencount 0
+execute unless score $oregen gencount > $oregen const2 run scoreboard players set $oregen gencount 0
 
 scoreboard objectives add temp dummy
 scoreboard players set $oregen temp 0
+scoreboard objectives add temp2 dummy
+scoreboard players set $oregen temp2 0
 
 scoreboard objectives add genX dummy
 scoreboard objectives add genZ dummy
+
+scoreboard objectives add testMode dummy
+scoreboard players set $oregen testMode 0

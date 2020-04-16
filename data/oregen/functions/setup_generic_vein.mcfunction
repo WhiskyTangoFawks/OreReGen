@@ -4,11 +4,11 @@
 scoreboard players set $oregen oreGenStartX -1
 scoreboard players set $oregen oreGenStartY -1
 scoreboard players set $oregen oreGenStartZ -1
-scoreboard players set $oregen oreGenStartRX -15
-scoreboard players set $oregen oreGenStartRY -15
+scoreboard players set $oregen oreGenStartRX -5
+scoreboard players set $oregen oreGenStartRY -5
 
-scoreboard players set $oregen oreGenMaxX 15
-scoreboard players set $oregen oreGenMaxZ 15
+scoreboard players set $oregen oreGenMaxX 12
+scoreboard players set $oregen oreGenMaxZ 12
 scoreboard players set $oregen oreGenMaxRX 180
 scoreboard players set $oregen oreVeinLenSum 0
 
