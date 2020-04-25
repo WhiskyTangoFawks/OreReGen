@@ -1,4 +1,3 @@
-scoreboard players add $oregen oreGenStartZ 1
-#execute if score $oregen oreGenStartZ >= $oregen oreGenTargetZ run say Z Has Been Set
-execute if score $oregen oreGenStartZ >= $oregen oreGenTargetZ rotated -15 -15 run function oregen:move/rotate_x
-execute if score $oregen oreGenStartZ < $oregen oreGenTargetZ positioned ~ ~ ~1 run function oregen:move/move_z
+scoreboard players add $start_z ore.move 1
+execute if score $start_z ore.move >= $target_z ore.move run function oregen:move/rotate_x
+execute if score $start_z ore.move < $target_z ore.move positioned ~ ~ ~1 run function oregen:move/move_z

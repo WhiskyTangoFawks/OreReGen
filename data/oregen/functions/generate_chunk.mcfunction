@@ -1,12 +1,11 @@
-scoreboard players add $oregen gencount 1
-
-function oregen:remove_ores
-function oregen:generators/start_emerald_generate
-function oregen:generators/start_diamond_generate
-function oregen:generators/start_lapis_generate
-function oregen:generators/start_gold_generate
-function oregen:generators/start_redstone_generate
-function oregen:generators/start_iron_generate
-function oregen:generators/start_coal_generate
-function oregen:generators/start_cobble_generate
-function oregen:generators/start_obsidian_generate
+say Generate Chunk
+scoreboard players add $chunk_count ore.generator 1
+function oregen:generators/ore_emerald
+function oregen:generators/ore_diamond
+function oregen:generators/ore_lapis
+function oregen:generators/ore_gold
+function oregen:generators/ore_redstone
+function oregen:generators/ore_iron
+function oregen:generators/ore_coal
+function oregen:generators/layer_cobble
+function oregen:generators/layer_obsidian

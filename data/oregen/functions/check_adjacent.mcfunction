@@ -1,0 +1,9 @@
+execute positioned ~ ~ ~ run function oregen:check_superchunk
+execute positioned ~-15 ~ ~ run function oregen:check_superchunk
+execute positioned ~ ~ ~-15 run function oregen:check_superchunk
+execute positioned ~-15 ~ ~-15 run function oregen:check_superchunk
+execute positioned ~15 ~ ~ run function oregen:check_superchunk
+execute positioned ~ ~ ~15 run function oregen:check_superchunk
+execute positioned ~15 ~ ~15 run function oregen:check_superchunk
+execute positioned ~15 ~ ~-15 run function oregen:check_superchunk
+execute positioned ~-15 ~ ~15 run function oregen:check_superchunk
