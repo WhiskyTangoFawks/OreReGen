@@ -1,4 +1,3 @@
-scoreboard players add $oregen oreGenStartRX 5
-#execute if score $oregen oreGenStartRX >= $oregen oreGenTargetRX run say RotateX Has been set
-execute if score $oregen oreGenStartRX >= $oregen oreGenTargetRX run function oregen:move/rotate_y
-execute if score $oregen oreGenStartRX < $oregen oreGenTargetRX rotated ~5 ~0 run function oregen:move/rotate_x 
+scoreboard players add $start_rx ore.move 6
+execute if score $start_rx ore.move >= $target_rx ore.move run function oregen:move/rotate_y
+execute if score $start_rx ore.move < $target_rx ore.move rotated ~6 ~ run function oregen:move/rotate_x 

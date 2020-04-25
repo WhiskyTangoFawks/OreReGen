@@ -1,113 +1,67 @@
 #say Running Init_Generation
 #say Setting random seed to 3553
-scoreboard objectives add oreGenRandomLast dummy
-scoreboard players set $oregen oreGenRandomLast 3553
 
-scoreboard objectives add oreGenRandomA dummy
-scoreboard players set $oregen oreGenRandomA 2175143
+#Utility variables for random generation
+scoreboard objectives add ore.rng dummy
+scoreboard players set $last ore.rng 3553
+scoreboard players set $const_a ore.rng 2175143
+scoreboard players set $const_c ore.rng 10653
+scoreboard players set $const_mod ore.rng 1000000
 
-scoreboard objectives add oreGenRandomC dummy
-scoreboard players set $oregen oreGenRandomC 10653
+#Ore generation type properties
+scoreboard objectives add ore.generator dummy
 
-scoreboard objectives add oreGenRandomMod dummy
-scoreboard players set $oregen oreGenRandomMod 1000000
+#constants
+scoreboard objectives add ore.const dummy
+scoreboard players set $256 ore.const 256
+scoreboard players set $222 ore.const 222
+scoreboard players set $1 ore.const 1
+scoreboard players set $3 ore.const 3
+scoreboard players set $2 ore.const 2
+scoreboard players set $4 ore.const 4
+scoreboard players set $5 ore.const 5
+scoreboard players set $6 ore.const 6
+scoreboard players set $8 ore.const 8
+scoreboard players set $16 ore.const 16
+scoreboard players set $32 ore.const 32
+scoreboard players set $64 ore.const 64
+scoreboard players set $128 ore.const 128
 
-scoreboard objectives add oreGenDensity dummy
-scoreboard objectives add oreGen256 dummy
-scoreboard players set $oregen oreGen256 256
+scoreboard players set $26 ore.const 26
 
-scoreboard objectives add oreGenType dummy
-scoreboard objectives add oreGenSpawnSum dummy
-scoreboard objectives add oreGenSpawnMax dummy
-scoreboard objectives add oreVeinLenMax dummy
-scoreboard objectives add oreVeinLenSum dummy
-
-#target density out of 256 above which it generates
-scoreboard objectives add oreGenTargetDens dummy
+scoreboard players set $243 ore.const 243
+scoreboard players set $192 ore.const 192
+scoreboard players set $100 ore.const 100
+scoreboard players set $110 ore.const 110
+scoreboard players set $50 ore.const 50
+scoreboard players set $20 ore.const 20
+scoreboard players set $10 ore.const 10
 
 #variables for incrementation during recursive movement
-scoreboard objectives add oreGenStartX dummy
-scoreboard objectives add oreGenStartY dummy
-scoreboard objectives add oreGenStartZ dummy
-scoreboard objectives add oreGenStartRX dummy
-scoreboard objectives add oreGenStartRY dummy
 
-#variables for setting with a random target
-scoreboard objectives add oreGenTargetX dummy
-scoreboard objectives add oreGenTargetY dummy
-scoreboard objectives add oreGenTargetZ dummy
-scoreboard objectives add oreGenTargetRX dummy
-scoreboard objectives add oreGenTargetRY dummy
+scoreboard objectives add ore.move dummy
+scoreboard objectives add ore.vein dummy
 
-#variables for setting the range
-scoreboard objectives add oreGenMinY dummy
-scoreboard objectives add oreGenMaxY dummy
-scoreboard objectives add oreGenMinRY dummy
-scoreboard objectives add oreGenMaxRY dummy
-scoreboard objectives add oreGenMaxRX dummy
+#Ore switch types
+scoreboard objectives add ore.type dummy
+scoreboard players set $coal ore.type 1
+scoreboard players set $iron ore.type 2
+scoreboard players set $redstone ore.type 3
+scoreboard players set $diamond ore.type 4
+scoreboard players set $gold ore.type 5
+scoreboard players set $lapis ore.type 6
+scoreboard players set $emerald ore.type 7
+scoreboard players set $obsidian ore.type 8
+scoreboard players set $cobble ore.type 9
 
-scoreboard objectives add oreGenMaxX dummy
-scoreboard objectives add oreGenMaxRY dummy
-scoreboard objectives add oreGenMaxZ dummy
+scoreboard objectives add ore.chunk.count dummy
+execute unless score $chunk_count ore.generator > $1 ore.const run scoreboard players set $chunk_count ore.generator 0
 
-scoreboard objectives add oreTypeCoal dummy
-scoreboard players set $oregen oreTypeCoal 1
+scoreboard objectives add ore.temp dummy
 
-scoreboard objectives add oreTypeIron dummy
-scoreboard players set $oregen oreTypeIron 2
-
-scoreboard objectives add oreTypeRedstone dummy
-scoreboard players set $oregen oreTypeRedstone 3
-
-scoreboard objectives add oreTypeDiamond dummy
-scoreboard players set $oregen oreTypeDiamond 4
-
-scoreboard objectives add oreTypeGold dummy
-scoreboard players set $oregen oreTypeGold 5
-
-scoreboard objectives add oreTypeLapis dummy
-scoreboard players set $oregen oreTypeLapis 6
-
-scoreboard objectives add oreTypeEmerald dummy
-scoreboard players set $oregen oreTypeEmerald 7
-
-scoreboard objectives add oreTypeObsidian dummy
-scoreboard players set $oregen oreTypeObsidian 8
-
-scoreboard objectives add oreTypeClay dummy
-scoreboard players set $oregen oreTypeClay 9
-
-scoreboard objectives add oreTypeCobble dummy
-scoreboard players set $oregen oreTypeCobble 9
-
-scoreboard objectives add const3 dummy
-scoreboard players set $oregen const3 3
-
-scoreboard objectives add const2 dummy
-scoreboard players set $oregen const2 2
-
-scoreboard objectives add const4 dummy
-scoreboard players set $oregen const4 4
-
-scoreboard objectives add const26 dummy
-scoreboard players set $oregen const26 26
-
-scoreboard objectives add const243 dummy
-scoreboard players set $oregen const243 243
-
-scoreboard objectives add const192 dummy
-scoreboard players set $oregen const192 192
-
-scoreboard objectives add gencount dummy
-execute unless score $oregen gencount > $oregen const2 run scoreboard players set $oregen gencount 0
-
-scoreboard objectives add temp dummy
-scoreboard players set $oregen temp 0
-scoreboard objectives add temp2 dummy
-scoreboard players set $oregen temp2 0
-
+#These are the chunk X and Y- not sure I am using them anywhere
 scoreboard objectives add genX dummy
 scoreboard objectives add genZ dummy
 
-scoreboard objectives add testMode dummy
-scoreboard players set $oregen testMode 0
+#Test mode- this will allow ores to be generated in air. Use a flatworld to observe gen patterns
+execute unless score $test ore.generator matches 1 run scoreboard players set $test ore.generator 0
