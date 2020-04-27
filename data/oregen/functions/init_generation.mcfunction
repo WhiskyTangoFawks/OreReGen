@@ -55,6 +55,7 @@ scoreboard players set $obsidian ore.type 8
 scoreboard players set $cobble ore.type 9
 scoreboard players set $netherrack ore.type 10
 scoreboard players set $clay ore.type 11
+scoreboard players set $clay ore.type 12
 
 scoreboard objectives add ore.chunk.count dummy
 execute unless score $chunk_count ore.generator > $1 ore.const run scoreboard players set $chunk_count ore.generator 0

@@ -11,8 +11,13 @@ scoreboard players set $per_chunk ore.generator 4
 scoreboard players set $density ore.generator 50
 scoreboard players set $density_factor ore.generator 0
 
-#Taiga at 1.5
+#Taiga at 1.5, in larger veins composed mostly of ice
+execute if predicate du:location/biome_types/taiga run scoreboard players set $per_chunk ore.generator 16
 execute if predicate du:location/biome_types/taiga run function oregen:util/per_chunk_x1.5
+execute if predicate du:location/biome_types/taiga run scoreboard players set $max_length ore.vein 3
+execute if predicate du:location/biome_types/taiga run scoreboard players set $max_height ore.vein 3
+execute if predicate du:location/biome_types/taiga run scoreboard players set $max_width ore.vein 3
+
 
 #Savannah at 0.66
 execute if predicate du:location/biome_types/savanna run function oregen:util/per_chunk_x0.6

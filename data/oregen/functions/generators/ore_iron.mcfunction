@@ -14,7 +14,18 @@ scoreboard players set $density_factor ore.generator 25
 execute if predicate du:location/biome_types/badlands run function oregen:util/per_chunk_x1.5
 execute if predicate du:location/biome_types/badlands run scoreboard players operation $max_length ore.vein *= $3 ore.const
 execute if predicate du:location/biome_types/badlands run scoreboard players operation $max_length ore.vein /= $2 ore.const
-execute if predicate du:location/biome_types/badlands run scoreboard players set $density ore.generator 33
+execute if predicate du:location/biome_types/badlands run scoreboard players set $density ore.generator 45
+
+#Savanna, smaller veins, 1.5x but less dense
+execute if predicate du:location/biome_types/savanna run function oregen:util/per_chunk_x1.5
+execute if predicate du:location/biome_types/savanna run scoreboard players set $density ore.generator 80
+execute if predicate du:location/biome_types/savanna run scoreboard players set $max_height ore.vein 2
+execute if predicate du:location/biome_types/savanna run scoreboard players set $max_width ore.vein 2
+
+#Plains, smaller veinsand less dense, normal gen amount
+execute if predicate du:location/biome_types/savanna run scoreboard players set $density ore.generator 80
+execute if predicate du:location/biome_types/savanna run scoreboard players set $max_height ore.vein 2
+execute if predicate du:location/biome_types/savanna run scoreboard players set $max_width ore.vein 2
 
 #.66 in swamp, at lower average
 execute if predicate du:location/biome_types/swamp run function oregen:util/per_chunk_x0.6
