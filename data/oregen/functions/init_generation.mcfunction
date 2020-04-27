@@ -60,10 +60,3 @@ scoreboard objectives add ore.chunk.count dummy
 execute unless score $chunk_count ore.generator > $1 ore.const run scoreboard players set $chunk_count ore.generator 0
 
 scoreboard objectives add ore.temp dummy
-
-#These are the chunk X and Y- not sure I am using them anywhere
-scoreboard objectives add genX dummy
-scoreboard objectives add genZ dummy
-
-#Test mode- this will allow ores to be generated in air. Use a flatworld to observe gen patterns
-execute unless score $test ore.generator matches 1 run scoreboard players set $test ore.generator 0

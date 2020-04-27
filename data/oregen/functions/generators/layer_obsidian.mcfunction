@@ -1,5 +1,5 @@
 scoreboard players set $rng_y ore.move 16
-scoreboard players set $min_y ore.move 0
+scoreboard players set $min_y ore.move 2
 scoreboard players set $min_ry ore.move 30
 scoreboard players set $max_ry ore.move 60
 
