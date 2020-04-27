@@ -24,6 +24,11 @@ execute if predicate du:location/biome_types/forest run function oregen:util/per
 #.66 in Swamp
 execute if predicate du:location/biome_types/swamp run function oregen:util/per_chunk_x0.6
 
+#.66 in taiga
+execute if predicate du:location/biome_types/taiga run function oregen:util/per_chunk_x0.6
+execute if predicate du:location/biome_types/taiga run scoreboard players set $density ore.generator 50
+
 function oregen:generators/post_setup
 scoreboard players operation $type ore.generator = $redstone ore.type
+execute if predicate du:location/biome_types/taiga run scoreboard players operation $type ore.generator = $diamond ore.type
 function oregen:veins/check_counter_then_do_setup

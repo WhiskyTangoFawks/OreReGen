@@ -14,12 +14,16 @@ scoreboard players set $density_factor ore.generator 75
 execute if predicate du:location/biome_types/taiga run function oregen:util/per_chunk_x1.5
 execute if predicate du:location/biome_types/taiga run scoreboard players set $min_y ore.move 16
 
+
 #Plains 1.5x
 execute if predicate du:location/biome_types/plains run function oregen:util/per_chunk_x1.5
 
-#swamp 0.5x
-execute if predicate du:location/biome_types/swamp run function oregen:util/per_chunk_x0.6
+#swamp as clay not gold
+execute if predicate du:location/biome_types/swamp run scoreboard players set $min_y ore.move 40
+execute if predicate du:location/biome_types/swamp run scoreboard players set $density ore.generator 50
+execute if predicate du:location/biome_types/swamp run scoreboard players set $density_factor ore.generator -100
 
 function oregen:generators/post_setup
 scoreboard players operation $type ore.generator = $gold ore.type
+execute if predicate du:location/biome_types/swamp run scoreboard players operation $type ore.generator = $clay ore.type
 function oregen:veins/check_counter_then_do_setup

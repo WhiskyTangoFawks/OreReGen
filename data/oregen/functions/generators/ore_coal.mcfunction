@@ -25,11 +25,12 @@ execute if predicate du:location/biome_types/jungle run scoreboard players set $
 #generate 0.66x in desert at a higher density
 execute if predicate du:location/biome_types/desert run function oregen:util/per_chunk_x0.6
 execute if predicate du:location/biome_types/desert run scoreboard players set $density ore.generator 75
-execute if predicate du:location/biome_types/jungle run scoreboard players set $rng_y ore.move 32
+
 
 #generate 0.66x in plains at a lower density
 execute if predicate du:location/biome_types/plains run function oregen:util/per_chunk_x0.6
 execute if predicate du:location/biome_types/plains run scoreboard players set $density ore.generator 35
+execute if predicate du:location/biome_types/plains run scoreboard players set $rng_y ore.move 32
 
 scoreboard players operation $type ore.generator = $coal ore.type
 function oregen:generators/post_setup

@@ -21,7 +21,11 @@ execute if predicate du:location/biome_types/forest run scoreboard players set $
 execute if predicate du:location/biome_types/swamp run function oregen:util/per_chunk_x1.5
 #Badlands at 0.66
 execute if predicate du:location/biome_types/badlands run function oregen:util/per_chunk_x0.6
+execute if predicate du:location/biome_types/desert run function oregen:util/per_chunk_x0.6
 
 function oregen:generators/post_setup
 scoreboard players operation $type ore.generator = $emerald ore.type
+execute if predicate du:location/biome_types/desert run scoreboard players operation $type ore.generator = $netherrack ore.type
+execute if predicate du:location/biome_types/badlands run scoreboard players operation $type ore.generator = $netherrack ore.type
+
 function oregen:veins/check_counter_then_do_setup

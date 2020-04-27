@@ -26,4 +26,4 @@ execute if predicate du:random/0.3 unless score $block_set ore.vein matches 1 st
 execute if predicate du:random/0.5 unless score $block_set ore.vein matches 1 store result score $block_set ore.vein run fill ~ ~ ~ ~ ~ ~ minecraft:water replace minecraft:diorite
 execute if predicate du:random/0.5 unless score $block_set ore.vein matches 1 store result score $block_set ore.vein run fill ~ ~ ~ ~ ~ ~ minecraft:cobblestone replace minecraft:diorite
 
-#execute unless score $block_set ore.vein matches 1 run function oregen:blocks/qblocks/qcoalqemerald
+execute unless predicate du:location/biome_types/taiga run
