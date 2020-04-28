@@ -1,12 +1,12 @@
 scoreboard players set $rng_y ore.move 64
-scoreboard players set $min_y ore.move 16
+scoreboard players set $min_y ore.move 0
 scoreboard players set $min_ry ore.move 30
 scoreboard players set $max_ry ore.move 60
 
 scoreboard players set $max_length ore.vein 16
 scoreboard players set $max_height ore.vein 3
 scoreboard players set $max_width ore.vein 3
-scoreboard players set $per_chunk ore.generator 84
+scoreboard players set $per_chunk ore.generator 180
 scoreboard players set $density ore.generator 66
 scoreboard players set $density_factor ore.generator 25
 

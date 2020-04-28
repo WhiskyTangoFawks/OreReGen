@@ -1,6 +1,7 @@
 {
-"values":[
-	"minecraft:white_concrete",
+    "values":[
+        "minecraft:air",	
+		"minecraft:white_concrete",
 		"minecraft:orange_concrete",
 		"minecraft:magenta_concrete",
 		"minecraft:light_blue_concrete",
@@ -52,6 +53,11 @@
         "minecraft:stone",
         "minecraft:granite",
         "minecraft:diorite",
-        "minecraft:andesite"
-	]
-}
+        "minecraft:andesite",
+        "quark:marble",
+        "quark:jasper",
+        "quark:limestone",
+        "quark:basalt",
+        "quark:slate"
+        ]
+    }

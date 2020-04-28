@@ -33,6 +33,7 @@ execute if predicate du:location/biome_types/taiga run scoreboard players set $r
 execute if predicate du:location/biome_types/taiga run scoreboard players set $max_length ore.vein 2
 execute if predicate du:location/biome_types/taiga run scoreboard players set $max_width ore.vein 2
 execute if predicate du:location/biome_types/taiga run scoreboard players set $max_ry ore.move 45
+execute if predicate du:location/biome_types/taiga run scoreboard players set $density_factor ore.generator -100
 
 function oregen:generators/post_setup
 scoreboard players operation $type ore.generator = $redstone ore.type

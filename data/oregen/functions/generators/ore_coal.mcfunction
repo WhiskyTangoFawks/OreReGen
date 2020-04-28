@@ -6,7 +6,7 @@ scoreboard players set $max_ry ore.move 30
 scoreboard players set $max_length ore.vein 10
 scoreboard players set $max_height ore.vein 2
 scoreboard players set $max_width ore.vein 8
-scoreboard players set $per_chunk ore.generator 120
+scoreboard players set $per_chunk ore.generator 140
 
 scoreboard players set $density ore.generator 75
 scoreboard players set $density_factor ore.generator 50
@@ -27,10 +27,10 @@ execute if predicate du:location/biome_types/desert run function oregen:util/per
 execute if predicate du:location/biome_types/desert run scoreboard players set $density ore.generator 75
 
 
-#generate 0.66x in plains at a lower density
+#generate 0.66x in plains at a lower height
 execute if predicate du:location/biome_types/plains run function oregen:util/per_chunk_x0.6
 execute if predicate du:location/biome_types/plains run scoreboard players set $density ore.generator 35
-execute if predicate du:location/biome_types/plains run scoreboard players set $rng_y ore.move 32
+execute if predicate du:location/biome_types/plains run scoreboard players set $min_y ore.move 0
 
 scoreboard players operation $type ore.generator = $coal ore.type
 function oregen:generators/post_setup

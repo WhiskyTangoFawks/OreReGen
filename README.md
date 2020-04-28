@@ -5,6 +5,9 @@ Generates shaped veins of customizable sizes, specific to different biomes. Coal
 
 Requires DataPack Utilities, available at https://github.com/ImCoolYeah105/Datapack-Utilities/releases
 
+Quark Mod
+-Comes with built in compatibility for Quark. The oregen/tags/blocks/replaceable.json must be deleted and replaced with the quarks_replaceable.json file, rename it to replaceable. (this json file includes the quarks stones, and allows this pack to generate ores in them.)
+
 Customization
 Each ore has a generator type, in the Generators folder, which sets teh following required variables
 
