@@ -12,3 +12,9 @@ function oregen:generators/ore_iron
 function oregen:generators/ore_coal
 function oregen:generators/layer_cobble
 function oregen:generators/layer_obsidian
+
+#testing, to remove the world once generation is done
+#fill ~ ~2 ~ ~16 ~64 ~16 air replace #oregen:replaceable
+#fill ~ ~2 ~ ~16 ~64 ~16 air replace water
+#fill ~ ~2 ~ ~16 ~64 ~16 air replace lava
+#fill ~ ~2 ~ ~16 ~64 ~16 air replace gravel

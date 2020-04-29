@@ -10,6 +10,7 @@ execute if block ~13 ~8 ~3 #oregen:replaceable run scoreboard players add $temp 
 execute if block ~13 ~8 ~8 #oregen:replaceable run scoreboard players add $temp ore.temp 1
 execute if block ~13 ~8 ~13 #oregen:replaceable run scoreboard players add $temp ore.temp 1
 
-execute if score $temp ore.temp > $3 ore.const run scoreboard players add $chunk_height ore.generator 4
+execute if score $temp ore.temp > $1 ore.const run scoreboard players add $chunk_height ore.generator 1
+execute if score $temp ore.temp > $3 ore.const run scoreboard players add $chunk_height ore.generator 3
 execute if score $temp ore.temp > $6 ore.const run scoreboard players add $chunk_height ore.generator 4
 execute if score $temp ore.temp > $5 ore.const if score $chunk_height ore.generator < $256 ore.const positioned ~ ~8 ~ run function oregen:get_chunk_height
