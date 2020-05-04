@@ -25,7 +25,7 @@ execute if predicate du:location/biome_types/savanna run function oregen:util/pe
 
 #Badlands 0.66
 execute if predicate du:location/biome_types/badlands run function oregen:util/per_chunk_x0.6
-execute if predicate du:location/biome_types/badlands runscoreboard players set $density ore.generator 33
+execute if predicate du:location/biome_types/badlands run scoreboard players set $density ore.generator 33
 
 function oregen:generators/finalize_generator
 function oregen:veins/check_counter_then_do_setup

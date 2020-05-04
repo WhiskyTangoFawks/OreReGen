@@ -36,9 +36,9 @@ execute if predicate du:location/biome_types/jungle run scoreboard players set $
 execute if predicate du:location/biome_types/jungle run scoreboard players set $max_width ore.vein 2
 execute if predicate du:location/biome_types/jungle run scoreboard players set $density ore.generator 33
 #Forest
-execute if predicate du:location/biome_types/forest run scoreboard players set $max_length ore.vein 12
-execute if predicate du:location/biome_types/forest run scoreboard players set $max_height ore.vein 2
-execute if predicate du:location/biome_types/forest run scoreboard players set $max_width ore.vein 2
+execute if predicate du:location/biome_types/forest run scoreboard players set $max_length ore.vein 20
+execute if predicate du:location/biome_types/forest run scoreboard players set $max_height ore.vein 1
+execute if predicate du:location/biome_types/forest run scoreboard players set $max_width ore.vein 3
 execute if predicate du:location/biome_types/forest run scoreboard players set $density ore.generator 33
 
 #swamp as clay not gold

@@ -1,5 +1,5 @@
 {
 	"values":[
-		"oregen:prep_chunk"
+		"oregen:get_chunk_pos_x"
 	]
 }
