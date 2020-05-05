@@ -1,0 +1,6 @@
+{
+	"values":[
+		"oregen:generators/ore_diamond",
+		"oregen:generators/ore_emerald"
+	]
+}

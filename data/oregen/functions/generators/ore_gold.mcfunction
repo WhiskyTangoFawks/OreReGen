@@ -42,11 +42,11 @@ execute if predicate du:location/biome_types/forest run scoreboard players set $
 execute if predicate du:location/biome_types/forest run scoreboard players set $density ore.generator 33
 
 #swamp as clay not gold
-execute if predicate du:location/biome_types/swamp run scoreboard players set $per_chunk ore.generator 80
-execute if predicate du:location/biome_types/swamp run scoreboard players set $min_y ore.move 40
-execute if predicate du:location/biome_types/swamp run scoreboard players set $density ore.generator 50
-execute if predicate du:location/biome_types/swamp run scoreboard players set $density_factor ore.generator -50
-execute if predicate du:location/biome_types/swamp run scoreboard players operation $type ore.generator = $clay ore.type
+#execute if predicate du:location/biome_types/swamp run scoreboard players set $per_chunk ore.generator 80
+#execute if predicate du:location/biome_types/swamp run scoreboard players set $min_y ore.move 40
+#execute if predicate du:location/biome_types/swamp run scoreboard players set $density ore.generator 50
+#execute if predicate du:location/biome_types/swamp run scoreboard players set $density_factor ore.generator -50
+#execute if predicate du:location/biome_types/swamp run scoreboard players operation $type ore.generator = $clay ore.type
 
 
 function oregen:generators/finalize_generator

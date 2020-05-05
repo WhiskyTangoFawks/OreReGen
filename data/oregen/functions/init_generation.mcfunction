@@ -1,5 +1,5 @@
 #say Running Init_Generation
-
+scoreboard objectives add load dummy
 #Utility variables for random generation
 scoreboard objectives add ore.rng dummy
 
@@ -50,3 +50,5 @@ scoreboard players set $ice ore.type 12
 execute unless score $chunk_count ore.generator > $1 ore.const run scoreboard players set $chunk_count ore.generator 0
 
 scoreboard objectives add ore.temp dummy
+
+gamerule maxCommandChainLength 1000000

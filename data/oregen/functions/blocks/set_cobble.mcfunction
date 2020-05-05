@@ -1,2 +1,1 @@
 execute unless score $block_set ore.vein matches 1 store result score $block_set ore.vein run fill ~ ~ ~ ~ ~ ~ minecraft:cobblestone replace minecraft:stone
-execute unless score $block_set ore.vein matches 1 if predicate du:location/biomes/river store result score $block_set ore.vein run fill ~ ~ ~ ~ ~ ~ minecraft:clay replace minecraft:sand

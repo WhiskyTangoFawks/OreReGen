@@ -1,9 +1,9 @@
 #All start variables need to start 1 increment down, so it catches up with the base value after the initial incremnt
 #Re-initializing vein generationvariables to their start values
 
-scoreboard players set $start_x ore.move -1
-scoreboard players set $start_y ore.move -1
-scoreboard players set $start_z ore.move -1
+#scoreboard players set $start_x ore.move -1
+#scoreboard players set $start_y ore.move -1
+#scoreboard players set $start_z ore.move -1
 scoreboard players set $start_rx ore.move -5
 scoreboard players set $start_ry ore.move -5
 scoreboard players set $count_length ore.vein 0
@@ -11,8 +11,6 @@ scoreboard players set $count_height ore.vein 0
 scoreboard players set $count_width ore.vein 0
 
 #These are basically constants, but are done as variables to allow for optimisation changes
-scoreboard players set $max_x ore.generator 15
-scoreboard players set $max_z ore.generator 15
 scoreboard players set $max_rx ore.generator 360
 
 #Set startX 0 to 
@@ -61,4 +59,4 @@ execute if predicate du:random/0.5 run function oregen:veins/mirror_ry
 #execute if score $target_ry ore.move > $360 ore.const run say Error:target_ry > 360 
 #execute if score $target_rx ore.move > $360 ore.const run say Error:target_rx > 360 
 
-function oregen:move/move_x
+execute if score $target_y ore.move matches 1..255 run function oregen:move/move_x

@@ -22,7 +22,7 @@ execute positioned ~ 0 ~ run function oregen:generators/layer_cobble
 execute positioned ~ 0 ~ run function oregen:generators/layer_obsidian
 
 #testing, to remove the world once generation is done
-fill ~ 2 ~ ~16 64 ~16 air replace water
-fill ~ 2 ~ ~16 64 ~16 air replace lava
-fill ~ 2 ~ ~16 64 ~16 air replace gravel
-fill ~ 2 ~ ~16 64 ~16 air replace #oregen:replaceable
+#fill ~ 2 ~ ~16 64 ~16 air replace water
+#fill ~ 2 ~ ~16 64 ~16 air replace lava
+#fill ~ 2 ~ ~16 64 ~16 air replace gravel
+#fill ~ 2 ~ ~16 64 ~16 air replace #oregen:replaceable

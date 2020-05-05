@@ -1,5 +1,5 @@
 {
     "values": [
-        "oregen:init_generation"
+        "oregen:load"
     ]
 }

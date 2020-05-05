@@ -1,4 +1,3 @@
 #scoreboard players set $test ore.generator 1
 
-scoreboard players set $chunk_height ore.generator 64
-execute positioned ~ 64 ~ run function oregen:get_chunk_height
+execute rotated 0 0 positioned ~-8 0 ~-8 run function oregen:generate_chunk

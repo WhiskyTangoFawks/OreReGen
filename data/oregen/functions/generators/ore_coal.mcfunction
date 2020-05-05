@@ -35,9 +35,9 @@ execute if predicate du:location/biome_types/desert run scoreboard players set $
 #generate 0.66x in plains at a lower height
 execute if predicate du:location/biome_types/plains run function oregen:util/per_chunk_x0.6
 execute if predicate du:location/biome_types/plains run scoreboard players set $min_y ore.move 0
-execute if predicate du:location/biome_types/desert run scoreboard players set $max_length ore.vein 5
-execute if predicate du:location/biome_types/desert run scoreboard players set $max_height ore.vein 1
-execute if predicate du:location/biome_types/desert run scoreboard players set $max_width ore.vein 5
+execute if predicate du:location/biome_types/plains run scoreboard players set $max_length ore.vein 5
+execute if predicate du:location/biome_types/plains run scoreboard players set $max_height ore.vein 1
+execute if predicate du:location/biome_types/plains run scoreboard players set $max_width ore.vein 5
 
 #Forest
 execute if predicate du:location/biome_types/forest run scoreboard players set $max_length ore.vein 6
