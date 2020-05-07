@@ -1,6 +1,13 @@
 {
 	"values":[
 		"oregen:generators/ore_diamond",
-		"oregen:generators/ore_emerald"
+		"oregen:generators/ore_emerald",
+		"oregen:generators/ore_lapis",
+		"oregen:generators/ore_gold",
+		"oregen:generators/ore_redstone",
+		"oregen:generators/ore_iron",
+		"oregen:generators/ore_coal",
+		"oregen:generators/layer_cobble",
+		"oregen:generators/layer_obsidian"
 	]
 }

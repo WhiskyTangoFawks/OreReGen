@@ -14,5 +14,7 @@ execute if score $remaining ore.generator < $vein_avg ore.generator if score $ge
 #check that were not stuck recursing without setting anything
 scoreboard players add $vein_count ore.generator 1
 execute if score $vein_count ore.generator >= $256 ore.const run say ERROR: attempted to setup a vein more than 256 times
+execute if score $vein_count ore.generator >= $256 ore.const run function oregen:print_error
+execute if score $vein_count ore.generator >= $256 ore.const 
 #if we had enough for another vein, recurse loop
 execute if score $remaining ore.generator >= $vein_avg ore.generator run function oregen:veins/check_counter_then_do_setup
