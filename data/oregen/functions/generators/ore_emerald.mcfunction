@@ -11,6 +11,7 @@ scoreboard players set $density ore.generator 80
 scoreboard players set $density_factor ore.generator 60
 
 scoreboard players operation $type ore.generator = $emerald ore.type
+scoreboard players set $skipIsReplaceable ore.generator 0
 
 #1.5x in savannah
 execute if predicate du:location/biome_types/savanna run function oregen:util/per_chunk_x1.5

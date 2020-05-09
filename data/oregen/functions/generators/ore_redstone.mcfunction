@@ -10,7 +10,7 @@ scoreboard players set $per_chunk ore.generator 14
 scoreboard players set $density ore.generator 90
 scoreboard players set $density_factor ore.generator 25
 scoreboard players operation $type ore.generator = $redstone ore.type
-
+scoreboard players set $skipIsReplaceable ore.generator 1
 
 #Desert, generates 1.5x more, veins are long and start higher
 execute if predicate du:location/biome_types/desert run scoreboard players set $rng_y ore.move 32

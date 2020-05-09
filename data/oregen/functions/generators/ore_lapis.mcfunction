@@ -10,6 +10,7 @@ scoreboard players set $per_chunk ore.generator 12
 scoreboard players set $density ore.generator 75
 scoreboard players set $density_factor ore.generator 50
 scoreboard players operation $type ore.generator = $lapis ore.type
+scoreboard players set $skipIsReplaceable ore.generator 0
 
 #1.5x and Longer veins in jungles
 execute if predicate du:location/biome_types/jungle run function oregen:util/per_chunk_x1.5

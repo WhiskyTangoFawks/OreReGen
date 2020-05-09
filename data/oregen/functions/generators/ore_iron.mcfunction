@@ -10,6 +10,7 @@ scoreboard players set $per_chunk ore.generator 190
 scoreboard players set $density ore.generator 66
 scoreboard players set $density_factor ore.generator 25
 scoreboard players operation $type ore.generator = $iron ore.type
+scoreboard players set $skipIsReplaceable ore.generator 0
 
 #Badlands, 1.5x and longer, but less dense
 execute if predicate du:location/biome_types/badlands run function oregen:util/per_chunk_x1.5

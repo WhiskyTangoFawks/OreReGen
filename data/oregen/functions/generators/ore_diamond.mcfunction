@@ -12,6 +12,7 @@ scoreboard players set $density ore.generator 50
 scoreboard players set $density_factor ore.generator 0
 
 scoreboard players operation $type ore.generator = $diamond ore.type
+scoreboard players set $skipIsReplaceable ore.generator 0
 
 #Taiga at 1.5, in larger veins composed mostly of ice
 execute if predicate du:location/biome_types/taiga run scoreboard players set $per_chunk ore.generator 16

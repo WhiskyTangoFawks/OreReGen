@@ -1,0 +1,3 @@
+execute unless score $block_set ore.vein matches 1 if score $counter ore.generator matches 0..125 if predicate du:random/0.7 store result score $block_set ore.vein run fill ~ ~-3 ~ ~ ~3 ~ minecraft:sandstone replace minecraft:sand
+execute unless score $block_set ore.vein matches 1 if score $counter ore.generator matches 126..250 if predicate du:random/0.5 store result score $block_set ore.vein run fill ~ ~-2 ~ ~2 ~ ~ minecraft:dirt replace minecraft:sand
+execute unless score $block_set ore.vein matches 1 store result score $block_set ore.vein if predicate du:random/0.5 run fill ~ ~-1 ~ ~ ~1 ~ minecraft:gravel replace minecraft:sand

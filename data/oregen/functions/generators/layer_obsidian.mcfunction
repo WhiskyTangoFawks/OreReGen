@@ -11,6 +11,7 @@ scoreboard players set $density ore.generator 80
 scoreboard players set $density_factor ore.generator 0
 
 scoreboard players operation $type ore.generator = $obsidian ore.type
+scoreboard players set $skipIsReplaceable ore.generator 0
 
 function oregen:generators/finalize_generator
 function oregen:veins/check_counter_then_do_setup
