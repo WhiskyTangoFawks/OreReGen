@@ -12,6 +12,8 @@ scoreboard players set $density_factor ore.generator 50
 
 scoreboard players operation $type ore.generator = $cobble ore.type
 scoreboard players set $skipIsReplaceable ore.generator 1
+scoreboard players set $density_secondary ore.generator 0
+scoreboard players set $type_secondary ore.generator 0
 
 function oregen:generators/finalize_generator
 function oregen:veins/check_counter_then_do_setup

@@ -1,0 +1,3 @@
+execute unless score $block_set ore.vein matches 1 if predicate du:random/0.5 store result score $block_set ore.vein run setblock ~ ~ ~ minecraft:mossy_cobblestone
+execute unless score $block_set ore.vein matches 1 if predicate du:random/0.5 store result score $block_set ore.vein run setblock ~ ~ ~ minecraft:water
+execute unless score $block_set ore.vein matches 1 store result score $block_set ore.vein run setblock ~ ~ ~ minecraft:cobblestone

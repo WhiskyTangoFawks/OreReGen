@@ -9,9 +9,13 @@ scoreboard players set $start_ry ore.move -5
 scoreboard players set $count_length ore.vein 0
 scoreboard players set $count_height ore.vein 0
 scoreboard players set $count_width ore.vein 0
+scoreboard players operation $half_width ore.vein = $max_width ore.vein
+scoreboard players operation $half_width ore.vein %= $2 ore.const
+
 
 #These are basically constants, but are done as variables to allow for optimisation changes
 scoreboard players set $max_rx ore.generator 360
+
 
 #Set startX 0 to 
 function oregen:util/rng8
@@ -41,6 +45,7 @@ scoreboard players add $target_z ore.move 4
 function oregen:util/rng64
 scoreboard players operation $target_rx ore.move = $last ore.rng
 scoreboard players operation $target_rx ore.move *= $6 ore.const
+execute if score $target_rx ore.move matches 361.. run scoreboard players operation $target_rx ore.move -= $360 ore.const
 
 #set startrotateY minRotateY to maxRotateY
 function oregen:util/rng64
@@ -53,10 +58,22 @@ scoreboard players operation $target_ry ore.move = $min_ry ore.move
 scoreboard players operation $target_ry ore.move += $temp ore.temp
 
 #in order to have ores slanted both ways, half the time we rotate it by 270
-execute if predicate du:random/0.5 run function oregen:veins/mirror_ry
+#This is onle useful if we are doing rx 1 to 180, with the full rotation its depricated
+#execute if predicate du:random/0.5 run function oregen:veins/mirror_ry
 
 #execute if score $target_y ore.move > $256 ore.const run say Error:target_y > 256 
 #execute if score $target_ry ore.move > $360 ore.const run say Error:target_ry > 360 
 #execute if score $target_rx ore.move > $360 ore.const run say Error:target_rx > 360 
 
-execute if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+#shift the vein into the adjacent chunk to allow for larget veins
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 338.. positioned ~ ~ ~-16 if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches ..22 positioned ~ ~ ~-16 if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 23..67 positioned ~16 ~ ~-16 if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 68..112 positioned ~16 ~ ~ if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 113..152 positioned ~16 ~ ~16 if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 158..202 positioned ~ ~ ~16 if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 203..247 positioned ~-16 ~ ~16 if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 248..292 positioned ~-16 ~ ~ if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+execute if score $max_length ore.vein matches 16.. if score $target_rx ore.move matches 293..337 positioned ~-16 ~ ~ if score $target_y ore.move matches 1..255 run function oregen:move/move_x
+
+execute if score $max_length ore.vein matches ..15 if score $target_y ore.move matches 1..255 run function oregen:move/move_x

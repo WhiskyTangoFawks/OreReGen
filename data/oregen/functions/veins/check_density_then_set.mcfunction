@@ -17,6 +17,7 @@ scoreboard players operation $temp2 ore.temp /= $100 ore.const
 scoreboard players operation $temp ore.temp -= $temp2 ore.temp
 
 execute if score $temp ore.temp < $density ore.generator run function oregen:blocks/switch_type
+execute unless score $temp ore.temp < $density ore.generator if score $temp ore.temp < $density_secondary ore.generator run function oregen:blocks/switch_secondary_type
 
 #uncomment to disable density switch for testing
 #function oregen:blocks/switch_type

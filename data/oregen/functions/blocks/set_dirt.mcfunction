@@ -1,0 +1,2 @@
+execute unless score $block_set ore.vein matches 1 if predicate du:random/0.2 store result score $block_set ore.vein run setblock ~ ~ ~ minecraft:gravel
+execute unless score $block_set ore.vein matches 1 store result score $block_set ore.vein run setblock ~ ~ ~ minecraft:dirt

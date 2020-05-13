@@ -46,6 +46,13 @@ scoreboard players set $cobble ore.type 9
 scoreboard players set $netherrack ore.type 10
 scoreboard players set $clay ore.type 11
 scoreboard players set $ice ore.type 12
+scoreboard players set $granite ore.type 13
+scoreboard players set $mossy_cobble ore.type 14
+scoreboard players set $quartz ore.type 15
+scoreboard players set $redsand ore.type 16
+scoreboard players set $andesite ore.type 17
+scoreboard players set $diorite ore.type 18
+scoreboard players set $dirt ore.type 19
 
 execute unless score $chunk_count ore.generator > $1 ore.const run scoreboard players set $chunk_count ore.generator 0
 
